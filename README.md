@@ -33,6 +33,7 @@ However, `trips_list_click` event appear in MoEngage, despite that it is not in 
 * logged_out_event
 
 ## Screenshots
+![Screenshot_20250228_141352](https://github.com/user-attachments/assets/b52965a3-1210-45cf-b808-a41915b62c73)
 <img width="1527" alt="Screenshot 2025-02-28 at 14 01 44" src="https://github.com/user-attachments/assets/9b03fa97-f4b9-4289-8615-d1c6501b823e" />
 <img width="1588" alt="Screenshot 2025-02-28 at 14 04 04" src="https://github.com/user-attachments/assets/ca817a55-2eec-4148-a296-b973caad76e3" />
 
