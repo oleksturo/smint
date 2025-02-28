@@ -2,14 +2,15 @@
 
 Android sample app
 
-App does initial MoEngage and Segment SDKs initialization and track events into Segment only.
-On the segment dashboard related destination and source are set.
+The app initializes MoEngage and Segment SDKs and tracks events into the Segment source.
+No events are tracked via MoEngage SDK. Only Segment SDK is used for event tracking.
+On the segment dashboard, related destination and source are set.
 Segment Destination to MoEngage is attached to the same workspaceId as the app.
-That destination contains events filer with whitelited events.
+That destination contains an events filer with whitelited events.
 
-It is expected that all events appears in Segment buy only whitelisted events appears in MoEngage.
+It is expected that all events appear in Segment, but only whitelisted events appear in MoEngage.
 
-# Hardcoded User ID
+## Hardcoded User ID
 
 `smint_usid`
 
@@ -21,11 +22,11 @@ It is expected that all events appears in Segment buy only whitelisted events ap
 
 ## Events whitelist
 
-Application Installed
-Application Opened
-Application Updated
-Experiment Viewed
-push_notification_received
-searched_event
-logged_in_event
-logged_out_event
+* Application Installed
+* Application Opened
+* Application Updated
+* Experiment Viewed
+* push_notification_received
+* searched_event
+* logged_in_event
+* logged_out_event
