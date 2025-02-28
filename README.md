@@ -9,6 +9,7 @@ Segment Destination to MoEngage is attached to the same workspaceId as the app.
 That destination contains an events filer with whitelited events.
 
 It is expected that all events appear in Segment, but only whitelisted events appear in MoEngage.
+However, `trips_list_click` event appear in MoEngage, despite that it is not in the whitefilter lsit.
 
 ## User data
 
