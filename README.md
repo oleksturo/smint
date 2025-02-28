@@ -12,7 +12,7 @@ It is expected that all events appear in Segment, but only whitelisted events ap
 
 ## User data
 
-* `smint_usid` - User ID
+* User ID: `smint_usid`
 
 ## Tracked events
 
