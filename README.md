@@ -10,9 +10,9 @@ That destination contains an events filer with whitelited events.
 
 It is expected that all events appear in Segment, but only whitelisted events appear in MoEngage.
 
-## Hardcoded User ID
+## User data
 
-`smint_usid`
+* `smint_usid` - User ID
 
 ## Tracked events
 
