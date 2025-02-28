@@ -1,1 +1,3 @@
-# Segment and MoEngage integration - Android sample app
+# Segment and MoEngage integration
+
+Android sample app
