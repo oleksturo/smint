@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.analytics.segment)
+    implementation(libs.analytics.segment.df)
     implementation(moengage.core)
     implementation(moengage.moengageSegmentKotlinDestination)
 

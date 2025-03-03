@@ -3,6 +3,10 @@ package com.sample.smint.ui
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.sample.smint.EVENT_LOG_IN
+import com.sample.smint.EVENT_LOG_OUT
+import com.sample.smint.EVENT_TRIPS_VIEWED
+import com.sample.smint.SMINT_USER_ID
 import com.sample.smint.SmintApp
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,8 +35,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private fun login() {
-        analytics.identify("smint_usid")
-        analytics.track("logged_in_event")
+        analytics.identify(SMINT_USER_ID)
+        analytics.track(EVENT_LOG_IN)
         state.update {
             it.copy(loggedIn = true)
         }
@@ -43,7 +47,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     private fun logout() {
         analytics.anonymize()
-        analytics.track("logged_out_event")
+        analytics.track(EVENT_LOG_OUT)
         state.update {
             it.copy(loggedIn = false)
         }
@@ -53,7 +57,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private fun viewTrips() {
-        analytics.track("trips_list_click")
+        analytics.track(EVENT_TRIPS_VIEWED)
         viewModelScope.launch {
             actions.emit(Action.ShowToast("Trips viewed. Event should be filtered"))
         }

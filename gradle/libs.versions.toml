@@ -19,6 +19,7 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 analytics-segment = { module = "com.segment.analytics.kotlin:android", version = "1.19.1" }
+analytics-segment-df = { module = "com.segment.analytics.kotlin:destination-filters", version = "1.1.0" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

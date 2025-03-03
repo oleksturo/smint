@@ -6,22 +6,24 @@ The app initializes MoEngage and Segment SDKs and tracks events into the Segment
 No events are tracked via MoEngage SDK. Only Segment SDK is used for event tracking.
 On the segment dashboard, related destination and source are set.
 Segment Destination to MoEngage is attached to the same workspaceId as the app.
-That destination contains an events filer with whitelited events.
+Destination filters are added to the MoEngage destination as a whitelist events.
 
-It is expected that all events appear in Segment, but only whitelisted events appear in MoEngage.
-However, `trips_list_click` event appear in MoEngage, despite that it is not in the whitefilter lsit.
+It is expected that all events appear in Segment, and only whitelisted events appear in MoEngage.
+
+`trips_list_click` event does not appear in MoEngage because of enabled filter 
+in the Segment Destination.
 
 ## User data
 
-* User ID: `smint_usid`
+* User ID: `smint_usid_1`
 
-## Tracked events
+## All Tracked events
 
-* logged_in_event - on click on the Log in button
-* logged_out_event - on click on the Log out button (appears after click in Log in)
-* trips_list_click - on click on View trips button (no matter user loggd in or not)
+* logged_in_event - on click on the Log in button. Appears in both: Segment and MoEngage
+* logged_out_event - on click on the Log out button. Appears in both: Segment and MoEngage
+* trips_list_click - on click on View trips button. Appears only in Segment
 
-## Events whitelist
+## Events whitelist in the Destination
 
 * Application Installed
 * Application Opened
@@ -31,11 +33,3 @@ However, `trips_list_click` event appear in MoEngage, despite that it is not in 
 * searched_event
 * logged_in_event
 * logged_out_event
-
-## Screenshots
-<img width="360" alt="Screenshot_20250228_141352" src="https://github.com/user-attachments/assets/b52965a3-1210-45cf-b808-a41915b62c73" />
-<img width="1527" alt="Screenshot 2025-02-28 at 14 01 44" src="https://github.com/user-attachments/assets/9b03fa97-f4b9-4289-8615-d1c6501b823e" />
-<img width="1588" alt="Screenshot 2025-02-28 at 14 04 04" src="https://github.com/user-attachments/assets/ca817a55-2eec-4148-a296-b973caad76e3" />
-
-
-

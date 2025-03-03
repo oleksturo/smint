@@ -13,6 +13,7 @@ import com.moengage.core.model.environment.MoEngageEnvironment
 import com.segment.analytics.kotlin.android.Analytics
 import com.segment.analytics.kotlin.core.Analytics
 import com.segment.analytics.kotlin.destinations.moengage.MoEngageDestination
+import com.segment.analytics.plugins.DestinationFilters
 
 class SmintApp : Application() {
 
@@ -28,20 +29,19 @@ class SmintApp : Application() {
     }
 
     private fun initSegment() {
-        val segmentApiKey = ""
-        segmentAnalytics = Analytics(segmentApiKey, applicationContext) {
+        segmentAnalytics = Analytics(SEGMENT_API_KEY, applicationContext) {
             trackApplicationLifecycleEvents = true
             flushAt = 3
             flushInterval = 10
             trackDeepLinks = true
         }.also {
+            it.add(DestinationFilters())
             it.add(MoEngageDestination(this))
         }
     }
 
     private fun initMoEngage() {
-        val workspaceId = ""
-        val moEngage = MoEngage.Builder(this, workspaceId, DataCenter.DATA_CENTER_4)
+        val moEngage = MoEngage.Builder(this, MOENGAGE_WORKSPACE_ID, DataCenter.DATA_CENTER_4)
             .configureMoEngageEnvironment(MoEngageEnvironmentConfig(MoEngageEnvironment.TEST))
             .configureNotificationMetaData(
                 NotificationConfig(
